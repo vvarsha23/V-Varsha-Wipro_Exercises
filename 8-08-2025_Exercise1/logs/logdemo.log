@@ -1,0 +1,2 @@
+2025-08-08T12:28:16.157+05:30 ERROR 33536 --- [logEx1] [http-nio-8089-exec-1] c.w.logEx1.controller.HomeController     : --Error--
+2025-08-08T12:28:16.160+05:30  WARN 33536 --- [logEx1] [http-nio-8089-exec-1] c.w.logEx1.controller.HomeController     : --WARN--
