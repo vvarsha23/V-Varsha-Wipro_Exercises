@@ -1,0 +1,7 @@
+com\wipro\notification\entity\Notification.class
+com\wipro\notification\entity\NotificationUser.class
+com\wipro\notification\repository\NotificationRepository.class
+com\wipro\notification\NotificationApplication.class
+com\wipro\notification\service\NotificationService.class
+com\wipro\notification\dto\NotificationRequest.class
+com\wipro\notification\collector\NotificationCollector.class
