@@ -1,0 +1,6 @@
+com\wipro\paymentms\controller\PaymentController.class
+com\wipro\paymentms\repo\PaymentRepo.class
+com\wipro\paymentms\service\PaymentService.class
+com\wipro\paymentms\entity\Payment.class
+com\wipro\paymentms\PaymentApplication.class
+com\wipro\paymentms\service\impl\PaymentServiceImpl.class
