@@ -1,0 +1,23 @@
+ /* Universal Selector */
+    * {
+      color: gray;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Group Selector */
+    h1, p {
+      color: blue;
+      background-color: lightyellow;
+    }
+
+    /* Class Selector */
+    .highlight {
+      color: green;
+      background-color: lightgreen;
+    }
+
+    /* ID Selector */
+    #special {
+      color: red;
+      background-color: lightblue;
+    }

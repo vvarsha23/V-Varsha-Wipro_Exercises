@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon-style Flexbox Layout</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+    .card {
+        background: white;
+        border-radius: 5px;
+        padding: 15px;
+        flex: 1;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .item {
+        flex: 1 1 calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .item img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    .item p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .link {
+        margin-top: 10px;
+        color: #007185;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    .link:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Card -->
+    <div class="card">
+        <h2>Pick up where you left off</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_6.jpg" alt="Item 1" width="100" height="100">
+                <p>XTRIM X-Macho Leather...</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_7.jpg" alt="Item 2" width="100" height="100">
+                <p>Kobo WTG-05 Leather</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_8.jpeg" alt="Item 3" width="100" height="100">
+                <p>19.ten Leather Gym GL...</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_9.jpeg" alt="Item 4" width="100" height="100">
+                <p>BROGBUS Neoprene W...</p>
+            </div>
+        </div>
+        <a href="#" class="link">See more</a>
+    </div>
+
+    <!-- Right Card -->
+    <div class="card">
+        <h2>Keep shopping for</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_10.jpeg" alt="Smartphones" width="100" height="100">
+                <p>Smartphones & basic...</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_11.jpg" alt="Kurtas" width="100" height="100">
+                <p>Women's kurtas & ku...</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_12.jpeg" alt="Trimmer" width="100" height="100">
+                <p>Men's beard & moust...</p>
+            </div>
+            <div class="item">
+                <img src="C:\Users\VARSHA REDDY\Desktop\Wiprotraining\Html_Training\htledemo\img_13.jpeg" alt="Cooktop" width="100" height="100">
+                <p>Induction cooktops</p>
+            </div>
+        </div>
+        <a href="#" class="link">View your browsing history</a>
+    </div>
+</div>
+
+</body>
+</html>
