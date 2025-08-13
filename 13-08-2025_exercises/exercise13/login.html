@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login Form</h2>
+    <form id="loginForm" novalidate>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" onblur="validateEmail()">
+      <div class="error" id="emailError"></div>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" onblur="validatePassword()">
+      <div class="error" id="passwordError"></div>
+
+      <button type="button" onclick="validateForm()">Login</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

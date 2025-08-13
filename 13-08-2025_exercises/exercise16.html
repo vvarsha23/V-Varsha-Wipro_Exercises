@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Image Gallery</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      width: 500px;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+  <img id="galleryImage" src="" alt="Gallery Image">
+  <div>
+    <button onclick="showPrev()">Prev</button>
+    <button onclick="showNext()">Next</button>
+  </div>
+
+  <script>
+    const images = [
+      'img1.jpg',
+      'img2.jpg',
+      'img3.jpg',
+    ];
+
+    let currentIndex = 0;
+    const galleryImage = document.getElementById('galleryImage');
+
+    function updateImage() {
+      galleryImage.src = images[currentIndex];
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    }
+
+    // Initialize
+    updateImage();
+  </script>
+
+</body>
+</html>
