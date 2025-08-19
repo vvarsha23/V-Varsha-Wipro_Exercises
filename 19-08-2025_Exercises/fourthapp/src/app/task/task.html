@@ -1,0 +1,10 @@
+<div>
+    <label for="description">Task Description:</label>
+    <input id="description" type="text" [(ngModel)]="description"/>
+    <label for="category">Category:</label>
+    <select id="category" [(ngModel)]="category">
+        <option value="" disabled selected>Select Category</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+    </select>
+    <button (click)="addTask()">Add Task</button>
+</div> 

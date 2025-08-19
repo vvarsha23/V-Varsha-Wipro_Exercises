@@ -1,0 +1,9 @@
+<div class="text-center mt-4">
+  <h2>Welcome to the Fruit Store</h2>
+</div>
+<!--Exercise6
+<app-ex1-displaylist *ngFor="let fruit of fruits" [fruit]="fruit"></app-ex1-displaylist>-->
+<app-ex1-displaylist
+  *ngFor="let fruit of fruits"
+  [fruit]="fruit"
+  (remove)="removeFruit(fruit)"></app-ex1-displaylist>

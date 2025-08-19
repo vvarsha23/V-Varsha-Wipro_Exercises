@@ -1,0 +1,25 @@
+<!-- Exercise1
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let fruit of fruits">
+      <div class="card mb-4 shadow-sm">
+        <img [src]="fruit.image" class="card-img-top" [alt]="fruit.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ fruit.name }}</h5>
+          <p class="card-text">{{ fruit.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!-- Exercise 5-->
+<!-- <p>{{ fruit.name }} <span *ngIf="fruit.color">- Color: {{ fruit.color }}</span></p>-->
+<!-- Exercise 6 -->
+<p>
+  {{ fruit.name }} 
+  <span *ngIf="fruit.color">- Color: {{ fruit.color }}</span>
+  <button (click)="removeItem()">Remove</button>
+</p>
+<p>Rendering fruit: {{ fruit.name }}</p>
+
+
