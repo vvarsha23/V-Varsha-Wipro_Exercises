@@ -1,0 +1,38 @@
+<!-- Exercise 1-->
+<div style="text-align:center; margin-top: 50px;">
+  <h2>Angular Uppercase Pipe Example</h2>
+
+  <input type="text" [(ngModel)]="inputText" placeholder="Enter text" />
+
+  <p><strong>Transformed:</strong> {{ inputText | uppercase }}</p>
+</div>
+
+<!--Exercise2-->
+<div style="text-align:center; margin-top: 50px;">
+  <h2>Angular DatePipe 'short' Format Example</h2>
+
+  <input type="date" [(ngModel)]="selectedDate" />
+
+  <p>
+    <strong>Formatted Date:</strong>
+    {{ selectedDate | date: 'short' }}
+  </p>
+</div>
+<!--Exercise3-->
+<div style="text-align:center; margin-top: 50px;">
+  <h2>Centigrade to Fahrenheit Converter</h2>
+
+  <input
+    type="number"
+    [(ngModel)]="centigrade"
+    placeholder="Enter °C"
+  />
+
+  <p>
+    <strong>Fahrenheit:</strong> {{ centigrade | ctof }}
+  </p>
+</div>
+<!--Exercise4-->
+<p appHighlightstrikethru>
+  This text is yellow and struck through.
+</p>

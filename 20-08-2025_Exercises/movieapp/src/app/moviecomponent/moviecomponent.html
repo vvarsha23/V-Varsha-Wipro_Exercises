@@ -1,0 +1,37 @@
+<p>moviecomponent works!</p>
+<div style="padding: 20px;">
+  <h2>Movie Manager</h2>
+
+  <form (ngSubmit)="saveMovie()" #movieForm="ngForm">
+    <input type="number" [(ngModel)]="movie.movieId" name="id" placeholder="Movie ID" required />
+    <input type="text" [(ngModel)]="movie.movieName" name="name" placeholder="Movie Name" required />
+    <input type="text" [(ngModel)]="movie.language" name="language" placeholder="Language" required />
+    <input type="number" [(ngModel)]="movie.imdbRating" name="rating" placeholder="IMDB Rating" required />
+
+    <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Movie</button>
+    <button type="button" (click)="resetForm()">Clear</button>
+  </form>
+
+  <hr />
+
+  <table border="1" style="width: 100%; margin-top: 20px;">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Language</th>
+      <th>IMDB Rating</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let m of movies">
+      <td>{{ m.movieId }}</td>
+      <td>{{ m.movieName }}</td>
+      <td>{{ m.language }}</td>
+      <td>{{ m.imdbRating }}</td>
+      <td>
+        <button (click)="editMovie(m)">Edit</button>
+        <button (click)="deleteMovie(m.movieId)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
