@@ -1,0 +1,29 @@
+<h2>Vehicle List</h2>
+<form (ngSubmit)="isEditing ? updateVehicle() : addVehicle()" #vehicleForm="ngForm">
+  <input type="text" name="make" [(ngModel)]="newVehicle.make" placeholder="Make" required>
+  <input type="text" name="fuelType" [(ngModel)]="newVehicle.fuelType" placeholder="Fuel Type" required>
+  <input type="text" name="model" [(ngModel)]="newVehicle.model" placeholder="Model" required>
+  <input type="number" name="price" [(ngModel)]="newVehicle.price" placeholder="Price" required>
+  <button type="submit">{{ isEditing ? 'Update Vehicle' : 'Add Vehicle' }}Vehicle</button>
+    <button type="button" (click)="cancelEdit()">Cancel</button>
+</form>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Make</th>
+      <th>Fuel Type</th>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+        <td>{{ vehicle.id }}</td>
+        <td>{{ vehicle.make }}</td>
+        <td>{{ vehicle.fuelType }}</td>
+        <td>{{ vehicle.model }}</td>
+        <td>{{ vehicle.price }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+{
+  "vehicles": [
+    {
+      "id": "1",
+      "make": "Toyota",
+      "fuelType": "Petrol",
+      "model": "Corolla",
+      "price": 20000
+    },
+    {
+      "id": "2",
+      "make": "Tesla",
+      "fuelType": "Electric",
+      "model": "Model 3",
+      "price": 35000
+    },
+    {
+      "id": "3",
+      "make": "Toyota",
+      "fuelType": "Hybrid",
+      "model": "Corolla Hybrid",
+      "price": 23000
+    },
+    {
+      "id": "4",
+      "make": "Toyota",
+      "fuelType": "Hybrid",
+      "model": "Corolla Hybrid",
+      "price": 22000
+    },
+    {
+      "id": 5,
+      "make": "Toyota",
+      "fuelType": "Hybrid",
+      "model": "Corolla Hybrid",
+      "price": 22000
+    },
+    {
+      "id": 0,
+      "make": "shift",
+      "fuelType": "Petrol",
+      "model": "2023",
+      "price": 400000
+    }
+  ]
+}
