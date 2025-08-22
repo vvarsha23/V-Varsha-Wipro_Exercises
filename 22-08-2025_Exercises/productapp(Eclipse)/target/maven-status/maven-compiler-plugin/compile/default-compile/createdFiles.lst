@@ -1,0 +1,4 @@
+com\wipro\productapp\ProductappApplication.class
+com\wipro\productapp\repository\ProductRepository.class
+com\wipro\productapp\controller\ProductController.class
+com\wipro\productapp\model\Product.class
