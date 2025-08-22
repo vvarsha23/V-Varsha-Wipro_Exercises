@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h3>Place an Order</h3>
+
+  <div class="mb-3">
+    <label>Product:</label>
+    <select [(ngModel)]="selectedProductId" (change)="onProductChange()" class="form-select">
+      <option [value]="0">-- Select Product --</option>
+      <option *ngFor="let product of products" [value]="product.id">{{ product.name }} ({{ product.qty }} in stock)</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Quantity:</label>
+    <input type="number" [(ngModel)]="purchasedQty" class="form-control" min="1">
+  </div>
+
+  <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+
+  <button class="btn btn-primary" (click)="placeOrder()" [disabled]="selectedProductId == 0">Place Order</button>
+</div>
+
