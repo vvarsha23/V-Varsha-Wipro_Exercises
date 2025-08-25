@@ -1,0 +1,50 @@
+<!--Ecercise-1-->
+<!--<h2>List of Cities</h2>
+<mat-list>
+  <mat-list-item *ngFor="let city of cities">
+    {{ city }}
+  </mat-list-item>
+</mat-list>-->
+<!--Ecercise-2-->
+<!--<mat-vertical-stepper linear>
+  <mat-step [stepControl]="nameForm">
+    <form [formGroup]="nameForm">
+      <ng-template matStepLabel>Name</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter your name" formControlName="name" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext [disabled]="nameForm.invalid">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="ageForm">
+    <form [formGroup]="ageForm">
+      <ng-template matStepLabel>Age</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" placeholder="Enter your age" formControlName="age" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext [disabled]="ageForm.invalid">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="emailForm">
+    <form [formGroup]="emailForm">
+      <ng-template matStepLabel>Email</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Enter your email" formControlName="email" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button [disabled]="emailForm.invalid">Submit</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-vertical-stepper>-->
+<app-registration-form></app-registration-form>
+

@@ -1,0 +1,48 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <!-- Name -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" placeholder="Enter your name">
+    <mat-error *ngIf="form.get('name')?.invalid && (form.get('name')?.touched || form.get('name')?.dirty)">
+      <span *ngIf="form.get('name')?.hasError('required')">Name is required</span>
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Enter your email">
+    <mat-error *ngIf="form.get('email')?.invalid && (form.get('email')?.touched || form.get('email')?.dirty)">
+      <span *ngIf="form.get('email')?.hasError('required')">Email is required</span>
+      <span *ngIf="form.get('email')?.hasError('email')">Enter a valid email address</span>
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Date of Birth -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="dob" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="form.get('dob')?.invalid && (form.get('dob')?.touched || form.get('dob')?.dirty)">
+      <span *ngIf="form.get('dob')?.hasError('required')">Date of birth is required</span>
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Subject of Study -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Subject of Study</mat-label>
+    <mat-select formControlName="subject">
+      <mat-option *ngFor="let subj of subjects" [value]="subj">{{ subj }}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.get('subject')?.invalid && (form.get('subject')?.touched || form.get('subject')?.dirty)">
+      <span *ngIf="form.get('subject')?.hasError('required')">Subject is required</span>
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Submit -->
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+    Submit
+  </button>
+</form>
