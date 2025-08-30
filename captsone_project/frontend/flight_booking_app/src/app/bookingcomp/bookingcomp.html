@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h2>Passenger & Booking Details</h2>
+  <form (ngSubmit)="submitBooking()">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="request.userEmail" name="userEmail" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label>Travel Date</label>
+      <input type="date" [(ngModel)]="request.travelDate" name="travelDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label>Amount (₹)</label>
+      <input type="number" [(ngModel)]="request.amount" name="amount" class="form-control" required />
+    </div>
+    <button class="btn btn-primary">Proceed to Payment</button>
+  </form>
+</div>
+
