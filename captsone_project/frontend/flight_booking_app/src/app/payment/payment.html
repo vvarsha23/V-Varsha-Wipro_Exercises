@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <h2>Payment</h2>
+  <form (ngSubmit)="simulatePayment()">
+    <div class="form-group">
+      <label>Select Payment Mode</label>
+      <select [(ngModel)]="mode" name="mode" class="form-control">
+        <option value="CARD">Card</option>
+        <option value="UPI">UPI</option>
+      </select>
+    </div>
+    <button class="btn btn-success mt-3">Pay & Confirm</button>
+  </form>
+</div>
+

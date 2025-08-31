@@ -1,0 +1,19 @@
+.container {
+  max-width: 800px;
+  background: #fff;
+}
+
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.swap-btn {
+  margin-top: 25px;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+
