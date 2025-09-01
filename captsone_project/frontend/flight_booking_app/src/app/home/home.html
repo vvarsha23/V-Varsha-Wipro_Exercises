@@ -1,0 +1,27 @@
+<div class="container mt-5 p-4 shadow rounded">
+  <h2 class="text-center mb-4">Search Flights</h2>
+  <form (ngSubmit)="submitSearch()" class="row g-3 align-items-center">
+    <div class="col-md-4">
+      <label class="form-label">From</label>
+      <input type="text" [(ngModel)]="search.source" name="source" placeholder="Enter city/airport code"
+        minlength="3" required class="form-control" />
+    </div>
+    <div class="col-md-1 d-flex justify-content-center align-items-end">
+      <button type="button" class="btn btn-outline-secondary swap-btn" (click)="swap()">⇆</button>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">To</label>
+      <input type="text" [(ngModel)]="search.destination" name="destination" placeholder="Enter city/airport code"
+        minlength="3" required class="form-control" />
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Departure</label>
+      <input type="date" [(ngModel)]="search.date" name="date" required class="form-control" />
+    </div>
+    <div class="col-12 text-center mt-3">
+      <button type="submit" class="btn btn-primary px-5">SEARCH</button>
+    </div>
+  </form>
+</div>
+
+
